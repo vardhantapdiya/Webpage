@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+.container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1; 
+}
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+.foreground{
+    transform: translateZ(-20px) scale(3);
+    top: 40%;
+}
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1; /*This  is added to add index regarding the object
+    , as to where it will be stacked in z axis. Here we did this
+    to bring the "ADVENTURE" text on top by indexing both images
+    -1*/
+}
+h1{
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.0rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed; /*Bg image fix karne k liye*/
+    background-position: center;
+    background-size: cover; /*to change image resolution to fit on our page */
+    height: 500px;
+}
+
+.description{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateX(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    transform: translateX(-40%);
+}
+
+.bg1{
+    background-image: url(Sports3.jpg);
+}
+.bg2{
+    background-image: url(Sports2.jpg);
+}
+.bg3{
+    background-image: url(Sports1.jpg);
+}
